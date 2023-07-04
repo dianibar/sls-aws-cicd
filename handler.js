@@ -5,7 +5,7 @@ module.exports.getVersion = async (event) => {
         statusCode:200,
         body: JSON.stringify(
             {
-                message: 'sls ci/cd v1'
+                message: 'sls ci/cd v1 ${process.env.STATUS}'
             },
             null,
             2

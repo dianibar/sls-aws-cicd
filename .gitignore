@@ -1,3 +1,5 @@
 .env
 .env.test
 .ignore
+/node_modules
+/serverless
