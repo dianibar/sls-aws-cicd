@@ -4,13 +4,13 @@ useDotenv: true
 provider: 
   name: aws
   runtime: nodejs18.x
-  stage: ${STAGE_NAME}
+  stage: ${env:STAGE_NAME}
   region: ap-southeast-2
 functions:
   getVersion:
     handler: handler.getVersion
     environment:
-      STAGE_NAME: ${STAGE_NAME}
+      STAGE_NAME: ${env:STAGE_NAME}
     events:
       - http:
           path: /get-version
