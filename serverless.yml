@@ -10,7 +10,7 @@ functions:
   getVersion:
     handler: handler.getVersion
     environment:
-      TABLE_NAME: tableName
+      STAGE_NAME: ${STAGE_NAME}
     events:
       - http:
           path: /get-version
