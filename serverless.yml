@@ -9,6 +9,8 @@ provider:
 functions:
   getVersion:
     handler: handler.getVersion
+    environment:
+      TABLE_NAME: tableName
     events:
       - http:
           path: /get-version
